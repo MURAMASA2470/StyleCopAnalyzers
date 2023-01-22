@@ -265,7 +265,7 @@
     <value>Element parameters should be documented</value>
   </data>
   <data name="SA1612Description" xml:space="preserve">
-    <value>XMLドキュメントの&lt;param&gt;タグ内のテキストが空です</value>
+    <value>XMLドキュメントのパラメーターの位置がメソッドの引数の順番と異なっています</value>
   </data>
   <data name="SA1612MissingParamForDocumentationMessageFormat" xml:space="preserve">
     <value>パラメーター '{0}' のドキュメントが存在しません</value>
@@ -286,13 +286,13 @@
     <value>Element parameter documentation should declare parameter name</value>
   </data>
   <data name="SA1614Description" xml:space="preserve">
-    <value>A &lt;param&gt; tag within a C# element's documentation header is empty.</value>
+    <value>XMLドキュメントの&lt;param&gt;タグ内のテキストが空です</value>
   </data>
   <data name="SA1614MessageFormat" xml:space="preserve">
-    <value>Element parameter documentation should have text</value>
+    <value>パラメーター '{0}' のドキュメントが存在しません</value>
   </data>
   <data name="SA1614Title" xml:space="preserve">
-    <value>Element parameter documentation should have text</value>
+    <value>パラメーターのドキュメントが存在しません</value>
   </data>
   <data name="SA1615Description" xml:space="preserve">
     <value>A C# element is missing documentation for its return value.</value>
