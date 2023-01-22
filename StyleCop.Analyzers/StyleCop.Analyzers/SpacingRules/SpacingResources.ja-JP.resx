@@ -214,37 +214,37 @@
     <value>Operator keyword should be followed by space</value>
   </data>
   <data name="SA1008CodeFix" xml:space="preserve">
-    <value>Fix spacing</value>
+    <value>空白スペースを修正します</value>
   </data>
   <data name="SA1008Description" xml:space="preserve">
-    <value>An opening parenthesis within a C# statement is not spaced correctly.</value>
+    <value>開始丸カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1008MessageNotFollowed" xml:space="preserve">
-    <value>Opening parenthesis should not be followed by a space.</value>
+    <value>開始丸カッコの後には空白スペースを記載することはできません</value>
   </data>
   <data name="SA1008MessageNotPreceded" xml:space="preserve">
-    <value>Opening parenthesis should not be preceded by a space.</value>
+    <value>開始丸カッコの前には空白スペースを記載することはできません</value>
   </data>
   <data name="SA1008MessagePreceded" xml:space="preserve">
-    <value>Opening parenthesis should be preceded by a space.</value>
+    <value>開始丸カッコの前には空白スペースを記載してください</value>
   </data>
   <data name="SA1008Title" xml:space="preserve">
-    <value>Opening parenthesis should be spaced correctly</value>
+    <value>開始丸カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1009Description" xml:space="preserve">
-    <value>A closing parenthesis within a C# statement is not spaced correctly.</value>
+    <value>終了丸カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1009MessageFollowed" xml:space="preserve">
-    <value>Closing parenthesis should be followed by a space</value>
+    <value>終了丸カッコの後には空白スペースを記載することはできません</value>
   </data>
   <data name="SA1009MessageNotFollowed" xml:space="preserve">
-    <value>Closing parenthesis should not be followed by a space</value>
+    <value>終了丸カッコの後には空白スペースを記載することはできません</value>
   </data>
   <data name="SA1009MessageNotPreceded" xml:space="preserve">
-    <value>Closing parenthesis should not be preceded by a space</value>
+    <value>終了丸カッコの前には空白スペースを記載することはできません</value>
   </data>
   <data name="SA1009Title" xml:space="preserve">
-    <value>Closing parenthesis should be spaced correctly</value>
+    <value>終了丸カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1010Description" xml:space="preserve">
     <value>An opening square bracket within a C# statement is not spaced correctly.</value>
@@ -268,22 +268,22 @@
     <value>Closing square brackets should be spaced correctly</value>
   </data>
   <data name="SA1012Description" xml:space="preserve">
-    <value>An opening brace within a C# element is not spaced correctly.</value>
+    <value>開始波カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1012MessageFormat" xml:space="preserve">
-    <value>Opening brace should{0} be {1} by a space</value>
+    <value>開始波カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1012Title" xml:space="preserve">
-    <value>Opening braces should be spaced correctly</value>
+    <value>開始波カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1013Description" xml:space="preserve">
-    <value>A closing brace within a C# element is not spaced correctly.</value>
+    <value>終了波カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1013MessageFormat" xml:space="preserve">
-    <value>Closing brace should{0} be {1} by a space</value>
+    <value>終了波カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1013Title" xml:space="preserve">
-    <value>Closing braces should be spaced correctly</value>
+    <value>終了波カッコ前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1014Description" xml:space="preserve">
     <value>An opening generic bracket within a C# element is not spaced correctly.</value>
@@ -415,16 +415,16 @@
     <value>Colons Should Be Spaced Correctly</value>
   </data>
   <data name="SA1025CodeFix" xml:space="preserve">
-    <value>Fix spacing</value>
+    <value>空白スペースを修正します</value>
   </data>
   <data name="SA1025Description" xml:space="preserve">
-    <value>The code contains multiple whitespace characters in a row.</value>
+    <value>複数の空白スペースが連続しています</value>
   </data>
   <data name="SA1025MessageFormat" xml:space="preserve">
-    <value>Code should not contain multiple whitespace characters in a row</value>
+    <value>複数の空白スペースは連続できません</value>
   </data>
   <data name="SA1025Title" xml:space="preserve">
-    <value>Code should not contain multiple whitespace in a row</value>
+    <value>複数の空白スペースは連続できません</value>
   </data>
   <data name="SA1026Description" xml:space="preserve">
     <value>An implicitly typed array allocation within a C# code file is not spaced correctly.</value>
@@ -436,16 +436,16 @@
     <value>Code should not contain space after new or stackalloc keyword in implicitly typed array allocation</value>
   </data>
   <data name="SA1027CodeFix" xml:space="preserve">
-    <value>Fix tabs</value>
+    <value>タブを修正します</value>
   </data>
   <data name="SA1027Description" xml:space="preserve">
-    <value>The code contains a tab or space character which is not consistent with the current project settings.</value>
+    <value>インデントがプロジェクト設定と一致していません</value>
   </data>
   <data name="SA1027MessageFormat" xml:space="preserve">
-    <value>Tabs and spaces should be used correctly</value>
+    <value>インデントがプロジェクト設定と一致していません</value>
   </data>
   <data name="SA1027Title" xml:space="preserve">
-    <value>Use tabs correctly</value>
+    <value>インデント文字を適切にします</value>
   </data>
   <data name="SA1028CodeFix" xml:space="preserve">
     <value>Remove trailing whitespace</value>
@@ -460,6 +460,6 @@
     <value>Code should not contain trailing whitespace</value>
   </data>
   <data name="TokenSpacingCodeFix" xml:space="preserve">
-    <value>Fix spacing</value>
+    <value>空白スペースを修正します</value>
   </data>
 </root>

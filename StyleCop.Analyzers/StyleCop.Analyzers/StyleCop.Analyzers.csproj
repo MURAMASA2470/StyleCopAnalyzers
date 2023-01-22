@@ -61,8 +61,17 @@
     <EmbeddedResource Update="MaintainabilityRules\MaintainabilityResources.ja-JP.resx">
       <LastGenOutput>MaintainabilityResources.ja-JP.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="OrderingRules\OrderingResources.ja-JP.resx">
+      <LastGenOutput>OrderingResources.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ReadabilityRules\ReadabilityResources.ja-JP.resx">
+      <LastGenOutput>ReadabilityResources.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="SpacingRules\SpacingResources.ja-JP.resx">
       <LastGenOutput>SpacingResources.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SpecialRules\SpecialResources.ja-JP.resx">
+      <LastGenOutput>SpecialResources.ja-JP.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

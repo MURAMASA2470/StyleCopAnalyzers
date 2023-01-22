@@ -121,7 +121,7 @@
     <value>波カッコを揃えます</value>
   </data>
   <data name="SA1500Description" xml:space="preserve">
-    <value>波カッコ("{"または"}")が単独の行に記載されていません</value>
+    <value>波カッコが単独の行に記載されていません</value>
   </data>
   <data name="SA1500MessageFormat" xml:space="preserve">
     <value>波カッコが単独の行に記載されていません</value>
@@ -157,16 +157,16 @@
     <value>Element should not be on a single line</value>
   </data>
   <data name="SA1503CodeFix" xml:space="preserve">
-    <value>Wrap with braces</value>
+    <value>波カッコで囲います</value>
   </data>
   <data name="SA1503Description" xml:space="preserve">
-    <value>The opening and closing braces for a C# statement have been omitted.</value>
+    <value>波カッコが省略されています</value>
   </data>
   <data name="SA1503MessageFormat" xml:space="preserve">
-    <value>Braces should not be omitted</value>
+    <value>波カッコは省略できません</value>
   </data>
   <data name="SA1503Title" xml:space="preserve">
-    <value>Braces should not be omitted</value>
+    <value>波カッコは省略できません</value>
   </data>
   <data name="SA1504CodeFixMultipleLines" xml:space="preserve">
     <value>Reformat accessors to multiple lines style</value>
@@ -184,16 +184,16 @@
     <value>All accessors should be single-line or multi-line</value>
   </data>
   <data name="SA1505CodeFix" xml:space="preserve">
-    <value>Remove blank lines following this brace</value>
+    <value>開始波カッコの下の不要な空白行を削除します</value>
   </data>
   <data name="SA1505Description" xml:space="preserve">
-    <value>An opening brace within a C# element, statement, or expression is followed by a blank line.</value>
+    <value>開始波カッコの下に不要な空白行があります</value>
   </data>
   <data name="SA1505MessageFormat" xml:space="preserve">
-    <value>An opening brace should not be followed by a blank line</value>
+    <value>開始波カッコの下に不要な空白行があります</value>
   </data>
   <data name="SA1505Title" xml:space="preserve">
-    <value>Opening braces should not be followed by blank line</value>
+    <value>開始波カッコの下に不要な空白行があります</value>
   </data>
   <data name="SA1506CodeFix" xml:space="preserve">
     <value>Remove blank line(s) after documentation header</value>
@@ -208,28 +208,28 @@
     <value>Element documentation headers should not be followed by blank line</value>
   </data>
   <data name="SA1507CodeFix" xml:space="preserve">
-    <value>Remove multiple blank lines</value>
+    <value>不要な空白行を削除します</value>
   </data>
   <data name="SA1507Description" xml:space="preserve">
-    <value>The C# code contains multiple blank lines in a row.</value>
+    <value>不要な空白行が連続しています</value>
   </data>
   <data name="SA1507MessageFormat" xml:space="preserve">
-    <value>Code should not contain multiple blank lines in a row</value>
+    <value>不要な空白行が連続しています</value>
   </data>
   <data name="SA1507Title" xml:space="preserve">
-    <value>Code should not contain multiple blank lines in a row</value>
+    <value>不要な空白行が連続しています</value>
   </data>
   <data name="SA1508CodeFix" xml:space="preserve">
-    <value>Remove blank lines preceding this brace</value>
+    <value>終了波カッコの下の不要な空白行を削除します</value>
   </data>
   <data name="SA1508Description" xml:space="preserve">
-    <value>A closing brace within a C# element, statement, or expression is preceded by a blank line.</value>
+    <value>終了波カッコの下に不要な空白行があります</value>
   </data>
   <data name="SA1508MessageFormat" xml:space="preserve">
-    <value>A closing brace should not be preceded by a blank line</value>
+    <value>終了波カッコの下に不要な空白行があります</value>
   </data>
   <data name="SA1508Title" xml:space="preserve">
-    <value>Closing braces should not be preceded by blank line</value>
+    <value>終了波カッコの下に不要な空白行があります</value>
   </data>
   <data name="SA1509CodeFix" xml:space="preserve">
     <value>Remove blank lines preceding this brace</value>
