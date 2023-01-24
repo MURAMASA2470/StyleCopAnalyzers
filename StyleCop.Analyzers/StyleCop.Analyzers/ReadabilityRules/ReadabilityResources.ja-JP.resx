@@ -334,16 +334,16 @@
     <value>Comments should contain text</value>
   </data>
   <data name="SA1121CodeFix" xml:space="preserve">
-    <value>Replace with built-in type</value>
+    <value>エイリアスに置き換えます</value>
   </data>
   <data name="SA1121Description" xml:space="preserve">
-    <value>The code uses one of the basic C# types, but does not use the built-in alias for the type.</value>
+    <value>基本的な型の1つを使用していますが、エイリアスは使用していません</value>
   </data>
   <data name="SA1121MessageFormat" xml:space="preserve">
-    <value>Use built-in type alias</value>
+    <value>エイリアスを使用します</value>
   </data>
   <data name="SA1121Title" xml:space="preserve">
-    <value>Use built-in type alias</value>
+    <value>エイリアスを使用します</value>
   </data>
   <data name="SA1122CodeFix" xml:space="preserve">
     <value>Replace with string.Empty</value>
