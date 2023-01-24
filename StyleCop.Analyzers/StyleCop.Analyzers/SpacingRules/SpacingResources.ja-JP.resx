@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="SA1000Description" xml:space="preserve">
-    <value>The spacing around a C# keyword is incorrect.</value>
+    <value>キーワードの前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1000MessageFormat" xml:space="preserve">
-    <value>The keyword '{0}' should{1} be followed by a space</value>
+    <value>キーワード '{0}' の後ろには空白スペースを記載します</value>
   </data>
   <data name="SA1000Title" xml:space="preserve">
-    <value>Keywords should be spaced correctly</value>
+    <value>キーワードの前後の空白スペースが正しくありません</value>
   </data>
   <data name="SA1001Description" xml:space="preserve">
     <value>カンマの前後の空白スペースが不適切です</value>
