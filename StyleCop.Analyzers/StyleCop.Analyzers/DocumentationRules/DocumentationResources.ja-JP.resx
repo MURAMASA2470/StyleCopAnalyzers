@@ -271,7 +271,7 @@
     <value>パラメーター '{0}' のドキュメントが存在しません</value>
   </data>
   <data name="SA1612ParamWrongOrderMessageFormat" xml:space="preserve">
-    <value>パラメーター '{0}' は {1}の位置に存在する必要があります</value>
+    <value>パラメーター '{0}' は {1} の位置に存在する必要があります</value>
   </data>
   <data name="SA1612Title" xml:space="preserve">
     <value>XMLドキュメントのパラメーターはメソッドの引数と一致させる必要があります</value>
@@ -289,7 +289,7 @@
     <value>XMLドキュメントの&lt;param&gt;タグ内のテキストが空です</value>
   </data>
   <data name="SA1614MessageFormat" xml:space="preserve">
-    <value>パラメーター '{0}' のドキュメントが存在しません</value>
+    <value>パラメーターのドキュメントが存在しません</value>
   </data>
   <data name="SA1614Title" xml:space="preserve">
     <value>パラメーターのドキュメントが存在しません</value>

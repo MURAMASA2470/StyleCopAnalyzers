@@ -220,16 +220,16 @@
     <value>不要な空白行が連続しています</value>
   </data>
   <data name="SA1508CodeFix" xml:space="preserve">
-    <value>終了波カッコの下の不要な空白行を削除します</value>
+    <value>終了波カッコの上の不要な空白行を削除します</value>
   </data>
   <data name="SA1508Description" xml:space="preserve">
-    <value>終了波カッコの下に不要な空白行があります</value>
+    <value>終了波カッコの上に不要な空白行があります</value>
   </data>
   <data name="SA1508MessageFormat" xml:space="preserve">
-    <value>終了波カッコの下に不要な空白行があります</value>
+    <value>終了波カッコの上に不要な空白行があります</value>
   </data>
   <data name="SA1508Title" xml:space="preserve">
-    <value>終了波カッコの下に不要な空白行があります</value>
+    <value>終了波カッコの上に不要な空白行があります</value>
   </data>
   <data name="SA1509CodeFix" xml:space="preserve">
     <value>Remove blank lines preceding this brace</value>
