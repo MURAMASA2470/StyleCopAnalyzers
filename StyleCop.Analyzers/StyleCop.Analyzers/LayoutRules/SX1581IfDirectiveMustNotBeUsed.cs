@@ -58,14 +58,14 @@ namespace StyleCop.Analyzers.LayoutRules
     /// </code>
     /// </remarks>
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    internal class SX1580TernaryOperatorsNotBeNested : DiagnosticAnalyzer
+    internal class SX1581IfDirectiveMustNotBeUsed : DiagnosticAnalyzer
     {
         /// <summary>
-        /// The ID for diagnostics produced by the <see cref="SX1580TernaryOperatorsNotBeNested"/> analyzer.
+        /// The ID for diagnostics produced by the <see cref="SX1581IfDirectiveMustNotBeUsed"/> analyzer.
         /// </summary>
-        public const string DiagnosticId = "SX1580";
+        public const string DiagnosticId = "SX1503";
 
-        private const string HelpLink = "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SX1580.md";
+        private const string HelpLink = "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SX1503.md";
         private static readonly LocalizableString Title = new LocalizableResourceString(nameof(LayoutResources.SA1503Title), LayoutResources.ResourceManager, typeof(LayoutResources));
         private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(LayoutResources.SA1503MessageFormat), LayoutResources.ResourceManager, typeof(LayoutResources));
         private static readonly LocalizableString Description = new LocalizableResourceString(nameof(LayoutResources.SA1503Description), LayoutResources.ResourceManager, typeof(LayoutResources));
@@ -74,6 +74,8 @@ namespace StyleCop.Analyzers.LayoutRules
         internal static readonly DiagnosticDescriptor Descriptor =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, AnalyzerCategory.LayoutRules, DiagnosticSeverity.Warning, AnalyzerConstants.EnabledByDefault, Description, HelpLink);
 #pragma warning restore SA1202 // Elements should be ordered by access
+
+        private static readonly Action<SyntaxNodeAnalysisContext> IfDirectiveAction = HandleIfDirectiveTrivia;
 
         /// <inheritdoc/>
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(Descriptor);
@@ -84,20 +86,13 @@ namespace StyleCop.Analyzers.LayoutRules
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
 
-            context.RegisterSyntaxNodeAction(ctx => CheckChildExpression(ctx, ((ConditionalExpressionSyntax)ctx.Node)), SyntaxKind.ConditionalExpression);
+            context.RegisterSyntaxNodeAction(IfDirectiveAction, SyntaxKind.IfDirectiveTrivia);
         }
 
-        private static void CheckChildExpression(SyntaxNodeAnalysisContext context, ExpressionSyntax childExpression)
+        private static void HandleIfDirectiveTrivia(SyntaxNodeAnalysisContext context)
         {
-            if (childExpression is ConditionalExpressionSyntax child)
-            {
-                if (child.Parent is ConditionalExpressionSyntax)
-                {
-                    context.ReportDiagnostic(Diagnostic.Create(Descriptor, childExpression.GetLocation()));
-                }
-            }
-
-            return;
+            var ifDirective = (IfDirectiveTriviaSyntax)context.Node;
+            context.ReportDiagnostic(Diagnostic.Create(Descriptor, ifDirective.GetLocation()));
         }
     }
 }

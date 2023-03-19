@@ -19,7 +19,7 @@ namespace StyleCop.Analyzers.DocumentationRules
     /// </summary>
     /// <remarks>
     /// <para>A violation of this rule occurs when the code contains a single-line comment which begins with three
-    /// slashes. Comments beginning with three slashes are reserved for XML documentation headers. Single-line comments
+    /// slashes. Comments beginning with three slashes are reserved for XML documentation headers. Multi-line comments
     /// should begin with only two slashes. When commenting out lines of code, it is advisable to begin the comment with
     /// four slashes to differentiate it from normal comments. For example:</para>
     ///
@@ -48,22 +48,22 @@ namespace StyleCop.Analyzers.DocumentationRules
     /// </code>
     /// </remarks>
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    internal class SA1626SingleLineCommentsMustNotUseDocumentationStyleSlashes : DiagnosticAnalyzer
+    internal class SX1680MultiLineCommentsMustNotUsed : DiagnosticAnalyzer
     {
         /// <summary>
         /// The ID for diagnostics produced by the
-        /// <see cref="SA1626SingleLineCommentsMustNotUseDocumentationStyleSlashes"/> analyzer.
+        /// <see cref="SX1680MultiLineCommentsMustNotUsed"/> analyzer.
         /// </summary>
-        public const string DiagnosticId = "SA1626";
-        private const string HelpLink = "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1626.md";
-        private static readonly LocalizableString Title = new LocalizableResourceString(nameof(DocumentationResources.SA1626Title), DocumentationResources.ResourceManager, typeof(DocumentationResources));
-        private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(DocumentationResources.SA1626MessageFormat), DocumentationResources.ResourceManager, typeof(DocumentationResources));
-        private static readonly LocalizableString Description = new LocalizableResourceString(nameof(DocumentationResources.SA1626Description), DocumentationResources.ResourceManager, typeof(DocumentationResources));
+        public const string DiagnosticId = "SX1680";
+        private const string HelpLink = "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SX1680.md";
+        private static readonly LocalizableString Title = new LocalizableResourceString(nameof(DocumentationResources.SX1680Title), DocumentationResources.ResourceManager, typeof(DocumentationResources));
+        private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(DocumentationResources.SX1680MessageFormat), DocumentationResources.ResourceManager, typeof(DocumentationResources));
+        private static readonly LocalizableString Description = new LocalizableResourceString(nameof(DocumentationResources.SX1680Description), DocumentationResources.ResourceManager, typeof(DocumentationResources));
 
         private static readonly DiagnosticDescriptor Descriptor =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, AnalyzerCategory.DocumentationRules, DiagnosticSeverity.Warning, AnalyzerConstants.EnabledByDefault, Description, HelpLink);
 
-        private static readonly Action<SyntaxNodeAnalysisContext> SingleLineDocumentationTriviaAction = HandleSingleLineDocumentationTrivia;
+        private static readonly Action<SyntaxNodeAnalysisContext> MultiLineCommentTriviaAction = HandleMultiLineCommentTrivia;
 
         /// <inheritdoc/>
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } =
@@ -75,10 +75,10 @@ namespace StyleCop.Analyzers.DocumentationRules
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
 
-            context.RegisterSyntaxNodeAction(SingleLineDocumentationTriviaAction, SyntaxKind.SingleLineCommentTrivia);
+            context.RegisterSyntaxNodeAction(MultiLineCommentTriviaAction, SyntaxKind.MultiLineCommentTrivia);
         }
 
-        private static void HandleSingleLineDocumentationTrivia(SyntaxNodeAnalysisContext context)
+        private static void HandleMultiLineCommentTrivia(SyntaxNodeAnalysisContext context)
         {
             var node = (DocumentationCommentTriviaSyntax)context.Node;
 

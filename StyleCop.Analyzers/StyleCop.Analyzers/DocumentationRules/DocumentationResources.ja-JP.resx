@@ -687,6 +687,15 @@
   <data name="StaticConstructorStandardTextSecondPart" xml:space="preserve">
     <value> {0}</value>
   </data>
+  <data name="SX1680Description" xml:space="preserve">
+    <value>ブロックコメントは使用できません。1行コメントを使用してください</value>
+  </data>
+  <data name="SX1680MessageFormat" xml:space="preserve">
+    <value>ブロックコメントは使用できません。1行コメントを使用してください</value>
+  </data>
+  <data name="SX1680Title" xml:space="preserve">
+    <value>ブロックコメントは使用できません。1行コメントを使用してください</value>
+  </data>
   <data name="TaskReturnElementFirstPart" xml:space="preserve">
     <value>A </value>
   </data>

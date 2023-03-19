@@ -66,16 +66,15 @@ namespace StyleCop.Analyzers.LayoutRules
         public const string DiagnosticId = "SX1503";
 
         private const string HelpLink = "https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SX1503.md";
-        private static readonly LocalizableString Title = new LocalizableResourceString(nameof(LayoutResources.SA1503Title), LayoutResources.ResourceManager, typeof(LayoutResources));
-        private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(LayoutResources.SA1503MessageFormat), LayoutResources.ResourceManager, typeof(LayoutResources));
-        private static readonly LocalizableString Description = new LocalizableResourceString(nameof(LayoutResources.SA1503Description), LayoutResources.ResourceManager, typeof(LayoutResources));
+        private static readonly LocalizableString Title = new LocalizableResourceString(nameof(LayoutResources.SX1503Title), LayoutResources.ResourceManager, typeof(LayoutResources));
+        private static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(LayoutResources.SX1503MessageFormat), LayoutResources.ResourceManager, typeof(LayoutResources));
+        private static readonly LocalizableString Description = new LocalizableResourceString(nameof(LayoutResources.SX1503Description), LayoutResources.ResourceManager, typeof(LayoutResources));
 
 #pragma warning disable SA1202 // Elements should be ordered by access
         internal static readonly DiagnosticDescriptor Descriptor =
             new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, AnalyzerCategory.LayoutRules, DiagnosticSeverity.Warning, AnalyzerConstants.EnabledByDefault, Description, HelpLink);
 #pragma warning restore SA1202 // Elements should be ordered by access
 
-        private static readonly Action<SyntaxNodeAnalysisContext> IfDirectiveAction = HandleIfDirectiveTrivia;
         private static readonly Action<SyntaxNodeAnalysisContext> IfStatementAction = HandleIfStatement;
         private static readonly Action<SyntaxNodeAnalysisContext, StyleCopSettings> UsingStatementAction = HandleUsingStatement;
 
@@ -89,7 +88,6 @@ namespace StyleCop.Analyzers.LayoutRules
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
 
-            context.RegisterSyntaxNodeAction(IfDirectiveAction, SyntaxKind.IfDirectiveTrivia);
             context.RegisterSyntaxNodeAction(IfStatementAction, SyntaxKind.IfStatement);
             context.RegisterSyntaxNodeAction(ctx => CheckChildStatement(ctx, ((DoStatementSyntax)ctx.Node).Statement), SyntaxKind.DoStatement);
             context.RegisterSyntaxNodeAction(ctx => CheckChildStatement(ctx, ((WhileStatementSyntax)ctx.Node).Statement), SyntaxKind.WhileStatement);
@@ -98,13 +96,6 @@ namespace StyleCop.Analyzers.LayoutRules
             context.RegisterSyntaxNodeAction(ctx => CheckChildStatement(ctx, ((FixedStatementSyntax)ctx.Node).Statement), SyntaxKind.FixedStatement);
             context.RegisterSyntaxNodeAction(UsingStatementAction, SyntaxKind.UsingStatement);
             context.RegisterSyntaxNodeAction(ctx => CheckChildStatement(ctx, ((LockStatementSyntax)ctx.Node).Statement), SyntaxKind.LockStatement);
-            context.RegisterSyntaxNodeAction(ctx => CheckChildExpression(ctx, ((ConditionalExpressionSyntax)ctx.Node)), SyntaxKind.ConditionalExpression);
-        }
-
-        private static void HandleIfDirectiveTrivia(SyntaxNodeAnalysisContext context)
-        {
-            var ifDirective = (IfDirectiveTriviaSyntax)context.Node;
-            context.ReportDiagnostic(Diagnostic.Create(Descriptor, ifDirective.GetLocation()));
         }
 
         private static void HandleIfStatement(SyntaxNodeAnalysisContext context)
@@ -150,20 +141,6 @@ namespace StyleCop.Analyzers.LayoutRules
             }
 
             CheckChildStatement(context, usingStatement.Statement);
-        }
-
-        private static void CheckChildExpression(SyntaxNodeAnalysisContext context, ExpressionSyntax childExpression)
-        {
-            if (childExpression is ConditionalExpressionSyntax child)
-            {
-                if (child.Parent is ConditionalExpressionSyntax)
-                {
-                    context.ReportDiagnostic(Diagnostic.Create(Descriptor, childExpression.GetLocation()));
-                }
-            }
-
-            return;
-
         }
 
         private static void CheckChildStatement(SyntaxNodeAnalysisContext context, StatementSyntax childStatement)

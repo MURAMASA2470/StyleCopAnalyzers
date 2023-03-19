@@ -399,31 +399,31 @@
   <data name="SA1520Title" xml:space="preserve">
     <value>Use braces consistently</value>
   </data>
-  <data name="SA1580Description" xml:space="preserve">
+  <data name="SX1503Description" xml:space="preserve">
+    <value>波カッコが省略されています</value>
+  </data>
+  <data name="SX1503MessageFormat" xml:space="preserve">
+    <value>return; break; continu;以外で波カッコは省略できません</value>
+  </data>
+  <data name="SX1503Title" xml:space="preserve">
+    <value>波カッコは省略できません</value>
+  </data>
+  <data name="SX1580Description" xml:space="preserve">
     <value>三項演算子をネストすることは出来ません</value>
   </data>
-  <data name="SA1580MessageFormat" xml:space="preserve">
+  <data name="SX1580MessageFormat" xml:space="preserve">
     <value>三項演算子をネストすることは出来ません</value>
   </data>
-  <data name="SA1580Title" xml:space="preserve">
+  <data name="SX1580Title" xml:space="preserve">
     <value>三項演算子をネストすることは出来ません</value>
   </data>
-  <data name="SA1581Description" xml:space="preserve">
-    <value>波カッコが単独の行に記載されていません</value>
+  <data name="SX1581Description" xml:space="preserve">
+    <value>IFディレクティブを使用することは出来ません</value>
   </data>
-  <data name="SA1581MessageFormat" xml:space="preserve">
-    <value>波カッコが単独の行に記載されていません</value>
+  <data name="SX1581MessageFormat" xml:space="preserve">
+    <value>IFディレクティブを使用することは出来ません</value>
   </data>
-  <data name="SA1581Title" xml:space="preserve">
-    <value>波カッコが単独の行に記載されていません</value>
-  </data>
-  <data name="SA1582Description" xml:space="preserve">
-    <value>波カッコが単独の行に記載されていません</value>
-  </data>
-  <data name="SA1582MessageFormat" xml:space="preserve">
-    <value>波カッコが単独の行に記載されていません</value>
-  </data>
-  <data name="SA1582Title" xml:space="preserve">
-    <value>波カッコが単独の行に記載されていません</value>
+  <data name="SX1581Title" xml:space="preserve">
+    <value>IFディレクティブを使用することは出来ません</value>
   </data>
 </root>
