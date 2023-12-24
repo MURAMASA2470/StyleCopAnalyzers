@@ -16,7 +16,7 @@ namespace StyleCop.Analyzers.Test.CSharp8.Settings
     using StyleCop.Analyzers.Test.Verifiers;
     using Xunit;
 
-    public class SettingsCSharp8UnitTests : SettingsCSharp7UnitTests
+    public partial class SettingsCSharp8UnitTests : SettingsCSharp7UnitTests
     {
         private const string TestProjectName = "TestProject";
 
@@ -67,6 +67,36 @@ stylecop.unrecognizedValue = 3
             Assert.NotNull(styleCopSettings.OrderingRules);
             Assert.Equal(UsingDirectivesPlacement.OutsideNamespace, styleCopSettings.OrderingRules.UsingDirectivesPlacement);
             Assert.Equal(OptionSetting.Allow, styleCopSettings.OrderingRules.BlankLinesBetweenUsingGroups);
+        }
+
+        [Fact]
+        public async Task VerifyFileHeaderTemplateFromEditorConfigAsync()
+        {
+            var settings = @"root = true
+
+[*]
+file_header_template = Line 1\nLine 2.
+";
+            var context = await this.CreateAnalysisContextFromEditorConfigAsync(settings).ConfigureAwait(false);
+
+            var styleCopSettings = context.GetStyleCopSettings(CancellationToken.None);
+
+            Assert.Equal("Line 1\nLine 2.", styleCopSettings.DocumentationRules.GetCopyrightText("unused"));
+        }
+
+        [Fact]
+        public async Task VerifyStyleCopDocumentationCopyrightTextFromEditorConfigAsync()
+        {
+            var settings = @"root = true
+
+[*]
+stylecop.documentation.copyrightText = Line 1\nLine 2.
+";
+            var context = await this.CreateAnalysisContextFromEditorConfigAsync(settings).ConfigureAwait(false);
+
+            var styleCopSettings = context.GetStyleCopSettings(CancellationToken.None);
+
+            Assert.Equal("Line 1\nLine 2.", styleCopSettings.DocumentationRules.GetCopyrightText("unused"));
         }
 
         [Theory]

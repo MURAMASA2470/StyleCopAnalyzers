@@ -15,6 +15,7 @@ namespace StyleCop.Analyzers.LayoutRules
     using Microsoft.CodeAnalysis.Diagnostics;
     using Microsoft.CodeAnalysis.Text;
     using StyleCop.Analyzers.Helpers;
+    using StyleCop.Analyzers.Lightup;
 
     /// <summary>
     /// A closing brace within a C# element, statement, or expression is not followed by a blank line.
@@ -271,10 +272,17 @@ namespace StyleCop.Analyzers.LayoutRules
                         return;
                     }
 
+                    if (nextToken.IsKind(SyntaxKind.CloseBracketToken))
+                    {
+                        // the close brace is for example in an object initializer at the end of a collection expression.
+                        return;
+                    }
+
                     if (nextToken.IsKind(SyntaxKind.AddKeyword)
                         || nextToken.IsKind(SyntaxKind.RemoveKeyword)
                         || nextToken.IsKind(SyntaxKind.GetKeyword)
-                        || nextToken.IsKind(SyntaxKind.SetKeyword))
+                        || nextToken.IsKind(SyntaxKind.SetKeyword)
+                        || nextToken.IsKind(SyntaxKindEx.InitKeyword))
                     {
                         // the close brace is followed by an accessor (SA1516 will handle that)
                         return;
